@@ -1,3 +1,8 @@
+v1.2.3b (May 02 2018)
+---------------------
+- Formalized inclusion of RaysceneNS's "Fix for __init__ FoscamCameraOverride class"
+- https://github.com/RaysceneNS/plugin.video.surveillanceroom/commit/67497e485b7036adb1943c674df1d9187716d0cc
+
 v1.2.3 (Nov 30 2015)
 --------------------
 - Removed import of previewgui in default.py
