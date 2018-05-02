@@ -3,17 +3,17 @@
 
 	<category label ="32018">
 		<setting label="32009" id="enabled1" type="bool" default="false" />
-		<setting label="32017" id="enabled_preview1" type="bool" default="true" enable="eq(-1,true)" subsetting="true" />
+		<setting label="32017" id="enabled_preview1" type="bool" default="false" enable="eq(-1,true)" subsetting="true" />
 		<setting label="32010" id="enabled2" type="bool" default="false" />
-		<setting label="32017" id="enabled_preview2" type="bool" default="true" enable="eq(-1,true)" subsetting="true" />
+		<setting label="32017" id="enabled_preview2" type="bool" default="false" enable="eq(-1,true)" subsetting="true" />
 		<setting label="32011" id="enabled3" type="bool" default="false" />
-		<setting label="32017" id="enabled_preview3" type="bool" default="true" enable="eq(-1,true)" subsetting="true" />
+		<setting label="32017" id="enabled_preview3" type="bool" default="false" enable="eq(-1,true)" subsetting="true" />
 		<setting label="32012" id="enabled4" type="bool" default="false" />
-		<setting label="32017" id="enabled_preview4" type="bool" default="true" enable="eq(-1,true)" subsetting="true" />
+		<setting label="32017" id="enabled_preview4" type="bool" default="false" enable="eq(-1,true)" subsetting="true" />
 		<setting label="32013" id="enabled5" type="bool" default="false" />
-		<setting label="32017" id="enabled_preview5" type="bool" default="true" enable="eq(-1,true)" subsetting="true" />
+		<setting label="32017" id="enabled_preview5" type="bool" default="false" enable="eq(-1,true)" subsetting="true" />
 		<setting label="32014" id="enabled6" type="bool" default="false" />
-		<setting label="32017" id="enabled_preview6" type="bool" default="true" enable="eq(-1,true)" subsetting="true" />
+		<setting label="32017" id="enabled_preview6" type="bool" default="false" enable="eq(-1,true)" subsetting="true" />
 	</category>
 
 
