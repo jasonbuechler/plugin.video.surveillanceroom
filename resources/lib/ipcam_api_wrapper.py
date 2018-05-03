@@ -62,6 +62,11 @@ class CameraAPIWrapper(object):
             if not port:
                 utils.log(3, 'Camera %s :: No port specified.' %self.camera_number)
                 port = ''
+
+            rtsp = settings.getSetting('rtsp', self.camera_number)
+            if not rtsp:
+                utils.log(3, 'Camera %s :: No rtsp specified.' %self.camera_number)
+                rtsp = ''
             
             username = settings.getSetting('user', self.camera_number)
             invalid = settings.invalid_user_char(username)
@@ -75,7 +80,7 @@ class CameraAPIWrapper(object):
                 utils.log(3, 'SETTINGS :: Camera %s - Invalid character in password: %s' %(self.camera_number, invalid))
                 password = ''
 
-            return [self.camera_number, host, port, username, password]
+            return [self.camera_number, host, port, username, password, rtsp]
                         
         else:
             ''' Generic IP Camera '''                   

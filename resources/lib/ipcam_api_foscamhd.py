@@ -43,6 +43,7 @@ class FoscamCamera(object):
         self.port = camera_settings[2]
         self.usr = camera_settings[3]
         self.pwd = camera_settings[4]
+        self.rtsp = camera_settings[5]		
         self.daemon = daemon
         self.verbose = verbose
 
@@ -811,13 +812,13 @@ class FoscamCameraOverride(FoscamCamera):
         #self.port = camera_settings[2]
         #self.usr = camera_settings[3]
         #self.pwd = camera_settings[4]
-        
-    
+        #self.rtsp = camera_settings[5]        
+
     @property
     def video_url(self):
         _videoUrl = settings.getSetting('stream_url', self.camera_number)
         if _videoUrl == '':
-            _videoUrl = "rtsp://{0}:{1}@{2}:554/videoMain".format(self.usr, self.pwd, self.host)
+            _videoUrl = "rtsp://{0}:{1}@{2}:{3}/videoMain".format(self.usr, self.pwd, self.host, self.rtsp)
         return _videoUrl
 
     @property
