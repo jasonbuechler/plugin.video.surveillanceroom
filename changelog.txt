@@ -1,3 +1,18 @@
+v1.2.3c (May 03 2018)
+---------------------
+- MY FIRST REAL PYTHON CODING EXPERIENCE :O  :D
+- modded RaysceneNS's mod for port 554, making it dynamicly load from settings
+- added a setting to each cam# page for rtsp port
+- changed some strings for clarity
+- added several strings for camera-type help
+- added in-menu guidance for generic & override cam types
+- made auth/net boxes invisible (instead of disabled) for generic type
+   (this might have been intentional by maikito... I don't know enough about
+    Python to say, but maybe expert users could have used {0}/{1}/etc in URLs??)
+- defaulted camera type to override: I suspect that's the most pop usage case
+- enabling a camera no longer auto-enables its preview toggle
+   (this is available as a menu in the addon, as well as via the context addon)
+
 v1.2.3b (May 02 2018)
 ---------------------
 - Formalized inclusion of RaysceneNS's "Fix for __init__ FoscamCameraOverride class"
