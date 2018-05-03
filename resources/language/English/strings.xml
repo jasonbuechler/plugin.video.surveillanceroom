@@ -67,7 +67,7 @@
   <string id="32064"></string>
   <string id="32065">Foscam HD</string>
   <string id="32066">Foscam SD</string>
-  <string id="32067">Foscam HD - Override (for C1/C2/etc)</string>
+  <string id="32067">Foscam Override (for C1/C2/etc)</string>
   <string id="32068">Generic IP Camera</string>
   <string id="32069"></string>
   <string id="32070"></string>
@@ -149,16 +149,11 @@
   <string id="32227">Previews disabled</string>
   <string id="32228">Preview not enabled.  Enable from add-on settings.</string>
   
-  <string id="33001">"Override" type defaults to modern foscam API (C1-style) stream and snapshot URLs</string>
-  <string id="33002">Yyou can override its defaults by entering full-and-complete stream/snapshot URLs</string>
+  <string id="33001">Generic: you must provide *complete* IPCam source URLs (PTZ control: none)</string>
+  <string id="33002">Override + omit URLs: use modern (h264/C1-style) addressing (PTZ: foscam only)</string>
+  <string id="33003">Override + provide URLs: ignore boxes for login/address/etc (PTZ: foscam only)</string>
   
   
-  
-  
-  
-
 
   
 </strings>
-
-
