@@ -149,6 +149,9 @@
   <string id="32227">Previews disabled</string>
   <string id="32228">Preview not enabled.  Enable from add-on settings.</string>
   
+  <string id="33001">"Override" type defaults to modern foscam API (C1-style) stream and snapshot URLs</string>
+  <string id="33002">Yyou can override its defaults by entering full-and-complete stream/snapshot URLs</string>
+  
   
   
   
