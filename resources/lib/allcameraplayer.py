@@ -57,6 +57,13 @@ class AllCameraDisplay(xbmcgui.WindowDialog):
                     (640, 0, 640, 360),
                     (0, 360, 640, 360),
                     (640, 360, 640, 360) ]
+#        coords = [  (0, 480, 426, 240),
+#                    (0, 0, 850, 480), 
+#                    (426, 480, 426, 240),
+#                    (850, 480, 426, 240), 
+#                    (850, 240, 426, 240),  
+#                    (850, 0, 426, 240) ]
+					
 
         effect = ['slide', 'slide']
         time = [1200, 1000]
@@ -72,13 +79,30 @@ class AllCameraDisplay(xbmcgui.WindowDialog):
                         [ ('WindowOpen', ("effect={0} start=640,360 time={1} tween={2} easing={3}").format( effect[0], time[0], tween[0], easing[0] )),
                           ('WindowClose', ("effect={0} end=640,360 time={1} tween={2} easing={3}").format( effect[1], time[1], tween[1], easing[1] )) ]
                         ]
-
+#        animations = [
+#                        [ ('WindowOpen', ("effect={0} start=-640,-360 time={1} tween={2} easing={3}").format( effect[0], time[0], tween[0], easing[0])),
+#                          ('WindowClose', ("effect={0} end=-640,-360 time={1} tween={2} easing={3}").format( effect[1], time[1], tween[1], easing[1] )) ],
+#                        [ ('WindowOpen', ("effect={0} start=640,-360 time={1} tween={2} easing={3}").format( effect[0], time[0], tween[0], easing[0] )),
+#                          ('WindowClose', ("effect={0} end=640,-360 time={1} tween={2} easing={3}").format( effect[1], time[1], tween[1], easing[1] )) ],
+#                        [ ('WindowOpen', ("effect={0} start=-640,360 time={1} tween={2} easing={3}").format( effect[0], time[0], tween[0], easing[0] )),
+#                          ('WindowClose', ("effect={0} end=-640,360 time={1} tween={2} easing={3}").format( effect[1], time[1], tween[1], easing[1] )) ],
+#                        [ ('WindowOpen', ("effect={0} start=640,360 time={1} tween={2} easing={3}").format( effect[0], time[0], tween[0], easing[0] )),
+#                          ('WindowClose', ("effect={0} end=640,360 time={1} tween={2} easing={3}").format( effect[1], time[1], tween[1], easing[1] )) ],
+#                        [ ('WindowOpen', ("effect={0} start=640,360 time={1} tween={2} easing={3}").format( effect[0], time[0], tween[0], easing[0] )),
+#                          ('WindowClose', ("effect={0} end=640,360 time={1} tween={2} easing={3}").format( effect[1], time[1], tween[1], easing[1] )) ],
+#                        [ ('WindowOpen', ("effect={0} start=640,360 time={1} tween={2} easing={3}").format( effect[0], time[0], tween[0], easing[0] )),
+#                          ('WindowClose', ("effect={0} end=640,360 time={1} tween={2} easing={3}").format( effect[1], time[1], tween[1], easing[1] )) ]
+#                        ]
+						
+						
+						
         # Acquire all Enabled & Connected cameras
         enabled_cameras = settings.getAllEnabledCameras(monitor)
 
         # Logic to ensure enabled cameras are placed in the correct position
         threads = []
         for window_position in '1234':
+#        for window_position in '123456':
             position = int(window_position) - 1
 
             # Sets the initial image to the loader gif
