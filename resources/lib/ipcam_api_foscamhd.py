@@ -806,13 +806,24 @@ class FoscamCamera(object):
 
 class FoscamCameraOverride(FoscamCamera):
     def __init__(self, camera_settings, daemon = False, verbose = True):
-        FoscamCamera.__init__(self, camera_settings, daemon, verbose)
+        super(FoscamCameraOverride, self).__init__(camera_settings, daemon = False, verbose = True)
+		# fix blindly derived from https://stackoverflow.com/questions/45776492
+			# "django websocker error: AttributeError: 'super' object has no attribute 'init'"
+		# as originally coded in v1.2.3:
+			# super(FoscamCamera, self).init(camera_settings, daemon = False, verbose = True) 
+		# as fixed by RaysceneNS in https://github.com/RaysceneNS/plugin.video.surveillanceroom/commit/67497e485b7036adb1943c674df1d9187716d0cc
+			# FoscamCamera.__init__(self, camera_settings, daemon, verbose)
         self.camera_number = camera_settings[0]
         #self.host = camera_settings[1]
         #self.port = camera_settings[2]
         #self.usr = camera_settings[3]
         #self.pwd = camera_settings[4]
         #self.rtsp = camera_settings[5]        
+			# requires a new getCameraSettings rtsp= assignment in ipcam_api_wrapper
+			#  (and appending 'rtsp' to the return array)
+			# requires a new RTSP port entry in each cam# settings page
+			# requires re-"targetting" the relative comparators if that setting
+			#  is listed above the 'alarm#' enum setting
 
     @property
     def video_url(self):
